@@ -1,0 +1,25 @@
+# Wykluczenia dla JakNieDojadę (GitHub Pages)
+
+# Foldery deweloperskie
+node_modules/
+functions/
+.dart_tool/
+.idea/
+.vscode/
+build/
+
+# Pliki systemowe i logi
+server_debug.log
+.dev.vars
+.flutter-plugins-dependencies
+.metadata
+pubspec.lock
+*.iml
+
+# Niepotrzebne stare pliki serwera
+server.js
+package.json
+package-lock.json
+
+# Zachowaj tylko potrzebne pliki strony w root:
+# index.html, style.css, script.js, assets/
