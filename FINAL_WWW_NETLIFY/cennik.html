@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cennik | JakNieDojadę</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background-orbs"><div class="orb orb-1"></div><div class="orb orb-3"></div><div class="stars-overlay"></div></div>
+
+    <nav class="navbar solid">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Logo" class="logo-img">
+                <span>JakNieDojadę <span class="badge badge-test">BETA</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Produkt</a>
+                <a href="technologia.html">Technologia AI</a>
+                <a href="cennik.html" class="active">Cennik</a>
+                <a href="faq.html">FAQ</a>
+                <a href="o-nas.html">O Startupie</a>
+            </div>
+            <button class="menu-toggle"><i class="ri-menu-3-line"></i></button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Produkt</a>
+            <a href="technologia.html">Technologia AI</a>
+            <a href="cennik.html" class="active">Cennik</a>
+            <a href="faq.html">FAQ</a>
+            <a href="o-nas.html">O Startupie</a>
+        </div>
+    </nav>
+
+    <section class="page-header reveal"><h1 class="slide-up">Zawsze <span class="gradient-text glow-text">Bezpłatnie.</span></h1></section>
+
+    <main class="page-content">
+        <div class="pricing-grid">
+            
+            <!-- Plan STANDARD -->
+            <div class="price-card reveal">
+                <h3>Standard</h3>
+                <div class="price-val">0zł <span>/ na zawsze</span></div>
+                <p style="color: var(--text-muted); margin-bottom: 25px;">Dla spóźnialskich amatorów. Podstawowa ochrona reputacji.</p>
+                <ul class="price-features">
+                    <li><i class="ri-checkbox-circle-fill"></i> 5 wymówek dziennie</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Model AI Core (Lekki)</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Tryb No-Internet</li>
+                    <li style="opacity: 0.4;"><i class="ri-close-circle-line"></i> Brak personalizacji biometrycznej</li>
+                </ul>
+                <a href="https://github.com/BartmiX2010-14/JakNieDojade/raw/main/JakNieDojade_Final.apk" class="btn btn-ghost" style="width:100%;">Zacznij Free</a>
+            </div>
+
+            <!-- Plan ELITE (Bestseller) -->
+            <div class="price-card elite reveal">
+                <div class="badge-premium">POLECANY</div>
+                <h3>Startup Elite</h3>
+                <div class="price-val">29zł <span>/ miesięcznie</span></div>
+                <p style="color: var(--text-main); margin-bottom: 25px;">Dla profesjonalistów chaosu. Pełna moc FreeLLM 200B+.</p>
+                <ul class="price-features">
+                    <li><i class="ri-vip-diamond-fill" style="color: #fbbf24;"></i> Nielimitowane wymówki</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Bio-Metryczna personalizacja</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Priorytetowe serwery (0.2s)</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Ekskluzywne motywy Aurora</li>
+                </ul>
+                <a href="https://github.com/BartmiX2010-14/JakNieDojade/raw/main/JakNieDojade_Final.apk" class="btn btn-primary" style="width:100%;">Kup Pakiet Elite</a>
+            </div>
+
+            <!-- Plan CORPORATE -->
+            <div class="price-card reveal">
+                <h3>Corporate</h3>
+                <div class="price-val">99zł <span>/ kwartał</span></div>
+                <p style="color: var(--text-muted); margin-bottom: 25px;">Dla rekinów biznesu. Pełna automatyzacja i White-Label.</p>
+                <ul class="price-features">
+                    <li><i class="ri-shield-user-fill"></i> Pełna anonimizacja IP</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Wsparcie dla 50+ sytuacji</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Dedykowany opiekun AI</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Gwarancja wiarygodności 99%</li>
+                </ul>
+                <a href="#" class="btn btn-ghost" style="width:100%; opacity: 0.5; pointer-events: none;">Wkrótce</a>
+            </div>
+
+            <!-- Karta MECENAS -->
+            <div class="price-card reveal" style="grid-column: 1 / -1; text-align: center; margin-top: 40px; border: 1px dashed var(--accent);">
+                <h3>Zostań Mecenasem Startupu ☕</h3>
+                <p style="margin-bottom: 20px;">Wesprzyj naszą misję i pomóż nam trenować jeszcze potężniejsze modele wymówek.</p>
+                <a href="#" class="btn btn-primary" style="padding: 15px 40px; pointer-events: none; opacity: 0.8;">
+                    Postaw Kawę (Wkrótce) 
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content" style="grid-template-columns: 1fr 1fr; gap: 40px; margin: 0 auto; max-width: 800px; padding-bottom: 40px;">
+            <div class="footer-col brand">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Logo">
+                    <span>JakNieDojadę</span>
+                </div>
+                <p class="brand-desc" style="color:var(--text-muted); font-size: 15px;">Aplikacja eliminująca stres codzienny przy pomocy generatywnej sztucznej inteligencji.</p>
+            </div>
+            <div class="footer-col" style="text-align: right;">
+                <h4 style="margin-bottom: 20px;">Mapa Strony</h4>
+                <a href="index.html">Produkt</a>
+                <a href="technologia.html">Technologia AI</a>
+                <a href="cennik.html">Cennik</a>
+                <a href="faq.html">FAQ</a>
+                <a href="o-nas.html">O Startupie</a>
+            </div>
+        </div>
+        <div class="footer-bottom" style="border-top: 1px solid var(--glass-border); padding: 25px 0;">
+            <p>© 2026 JakNieDojadę Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+</body>
+</html>

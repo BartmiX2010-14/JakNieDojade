@@ -37,49 +37,61 @@
 
     <section class="page-header reveal"><h1 class="slide-up">Zawsze <span class="gradient-text glow-text">Bezpłatnie.</span></h1></section>
 
-    <main class="page-content reveal">
-        <div class="content-block slide-up delay-1">
-            <div class="pricing-cards">
-                <div class="price-card pro">
-                    <h3>FreeLLM Premium</h3>
-                    <div class="price-val">0zł <span>/ na zawsze</span></div>
-                    <p>Pełny dostęp do 200 miliardów parametrów sieci neuronalnej.</p>
-                    <ul class="price-features">
-                        <li><i class="ri-check-line"></i> Nielimitowane generowanie wymówek</li>
-                        <li><i class="ri-check-line"></i> Tryb "No-Internet Fallback"</li>
-                        <li><i class="ri-check-line"></i> Pełen privacy mode (Brak zbierania logów)</li>
-                        <li><i class="ri-check-line"></i> Zero reklam</li>
-                    </ul>
-                    <a href="https://github.com/BartmiX2010-14/JakNieDojade/raw/main/JakNieDojade_Final.apk" class="btn btn-primary" style="width:100%;" download>Pobierz APK</a>
-                </div>
-                
-                <div class="price-card pro reveal">
-                    <h3>Startup Elite</h3>
-                    <div class="price-val">49 <span>PLN/mc</span></div>
-                    <ul class="price-features">
-                        <li><i class="ri-checkbox-circle-fill"></i> Nielimitowane Wymówki</li>
-                        <li><i class="ri-checkbox-circle-fill"></i> Szybszy Silnik AI</li>
-                        <li><i class="ri-checkbox-circle-fill"></i> Ekskluzywne Motywy</li>
-                    </ul>
-                    <a href="https://github.com/BartmiX2010-14/JakNieDojade/raw/main/JakNieDojade_Final.apk" class="btn btn-primary">Wybierz Elite</a>
-                </div>
-
-                <!-- Karta Mecenas Startupu (Redesigned) -->
-                <div class="price-card reveal" style="border: 1px solid var(--accent); position: relative; overflow: hidden;">
-                    <div class="card-badge" style="position: absolute; top: 10px; right: -30px; background: var(--accent); color: black; transform: rotate(45deg); padding: 5px 40px; font-weight: 800; font-size: 12px; box-shadow: 0 0 15px var(--accent);">WKRÓTCE</div>
-                    <h3>Mecenas Startupu</h3>
-                    <div class="price-val">Postaw <span style="font-size: 24px;">Kawiarkę</span></div>
-                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">Wesprzyj rozwój "JakNieDojadę" i pomóż nam utrzymać serwery AI klasy 200B+.</p>
-                    <ul class="price-features">
-                        <li><i class="ri-heart-pulse-fill" style="color:#EF4444;"></i> Miejsce w serduszku deweloperów</li>
-                        <li><i class="ri-vip-crown-fill" style="color:#F59E0B;"></i> Ekskluzywna Odznaka w aplikacji</li>
-                        <li><i class="ri-flashlight-fill" style="color:#60A5FA;"></i> Dostęp do nowych funkcji 48h wcześniej</li>
-                    </ul>
-                    <a href="#" class="btn btn-ghost" style="width:100%; pointer-events: none; opacity: 0.6;">
-                        <i class="ri-cup-line"></i> Postaw Kawę
-                    </a>
-                </div>
+    <main class="page-content">
+        <div class="pricing-grid">
+            
+            <!-- Plan STANDARD -->
+            <div class="price-card reveal">
+                <h3>Standard</h3>
+                <div class="price-val">0zł <span>/ na zawsze</span></div>
+                <p style="color: var(--text-muted); margin-bottom: 25px;">Dla spóźnialskich amatorów. Podstawowa ochrona reputacji.</p>
+                <ul class="price-features">
+                    <li><i class="ri-checkbox-circle-fill"></i> 5 wymówek dziennie</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Model AI Core (Lekki)</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Tryb No-Internet</li>
+                    <li style="opacity: 0.4;"><i class="ri-close-circle-line"></i> Brak personalizacji biometrycznej</li>
+                </ul>
+                <a href="https://github.com/BartmiX2010-14/JakNieDojade/raw/main/JakNieDojade_Final.apk" class="btn btn-ghost" style="width:100%;">Zacznij Free</a>
             </div>
+
+            <!-- Plan ELITE (Bestseller) -->
+            <div class="price-card elite reveal">
+                <div class="badge-premium">POLECANY</div>
+                <h3>Startup Elite</h3>
+                <div class="price-val">29zł <span>/ miesięcznie</span></div>
+                <p style="color: var(--text-main); margin-bottom: 25px;">Dla profesjonalistów chaosu. Pełna moc FreeLLM 200B+.</p>
+                <ul class="price-features">
+                    <li><i class="ri-vip-diamond-fill" style="color: #fbbf24;"></i> Nielimitowane wymówki</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Bio-Metryczna personalizacja</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Priorytetowe serwery (0.2s)</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Ekskluzywne motywy Aurora</li>
+                </ul>
+                <a href="https://github.com/BartmiX2010-14/JakNieDojade/raw/main/JakNieDojade_Final.apk" class="btn btn-primary" style="width:100%;">Kup Pakiet Elite</a>
+            </div>
+
+            <!-- Plan CORPORATE -->
+            <div class="price-card reveal">
+                <h3>Corporate</h3>
+                <div class="price-val">99zł <span>/ kwartał</span></div>
+                <p style="color: var(--text-muted); margin-bottom: 25px;">Dla rekinów biznesu. Pełna automatyzacja i White-Label.</p>
+                <ul class="price-features">
+                    <li><i class="ri-shield-user-fill"></i> Pełna anonimizacja IP</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Wsparcie dla 50+ sytuacji</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Dedykowany opiekun AI</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Gwarancja wiarygodności 99%</li>
+                </ul>
+                <a href="#" class="btn btn-ghost" style="width:100%; opacity: 0.5; pointer-events: none;">Wkrótce</a>
+            </div>
+
+            <!-- Karta MECENAS -->
+            <div class="price-card reveal" style="grid-column: 1 / -1; text-align: center; margin-top: 40px; border: 1px dashed var(--accent);">
+                <h3>Zostań Mecenasem Startupu ☕</h3>
+                <p style="margin-bottom: 20px;">Wesprzyj naszą misję i pomóż nam trenować jeszcze potężniejsze modele wymówek.</p>
+                <a href="#" class="btn btn-primary" style="padding: 15px 40px; pointer-events: none; opacity: 0.8;">
+                    Postaw Kawę (Wkrótce) 
+                </a>
+            </div>
+
         </div>
     </main>
 
