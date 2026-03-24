@@ -1,25 +1,34 @@
 # Wykluczenia dla JakNieDojadę (GitHub Pages)
 
-# Foldery deweloperskie
-node_modules/
-functions/
+# Foldery źródłowe apki (BARDZO WAŻNE - NIE PUBLIKOWAĆ!)
+lib/
+android/
+ios/
+test/
+linux/
+macos/
+windows/
+web/
 .dart_tool/
 .idea/
 .vscode/
-build/
 
-# Pliki systemowe i logi
+# Buildy i śmieci
+build/
+node_modules/
+functions/
 server_debug.log
 .dev.vars
 .flutter-plugins-dependencies
 .metadata
 pubspec.lock
-*.iml
+analysis_options.yaml
+jakniedojade.iml
+*.apk
+!JakNieDojade_Final.apk
 
-# Niepotrzebne stare pliki serwera
+# Niepotrzebne pliki serwera
 server.js
 package.json
 package-lock.json
-
-# Zachowaj tylko potrzebne pliki strony w root:
-# index.html, style.css, script.js, assets/
+pubspec.yaml
