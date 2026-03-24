@@ -1,16 +1,19 @@
 /**
- * script.js - Główny Silnik Płynności Strony JakNieDojadę (v9.0 Extreme)
+ * script.js - Główny Silnik Płynności Strony JakNieDojadę (Aurora v11.0)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ====================================================
-       1. ANIMACJE OBSERVER (ScrollReveal) ulepszone
+       1. ANIMACJE OBSERVER (ScrollReveal) 
        ==================================================== */
     const reveals = document.querySelectorAll('.reveal');
-    const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -40px 0px" };
+    const revealOptions = { 
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px" 
+    };
 
-    const revealOnScroll = new IntersectionObserver((entries, observer) => {
+    const revealOnScroll = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
@@ -20,17 +23,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     reveals.forEach(reveal => revealOnScroll.observe(reveal));
 
+    // Wymuś widoczność na starcie dla elementów widocznych od razu
+    setTimeout(() => {
+        window.scrollTo(0, window.scrollY + 1);
+        window.scrollTo(0, window.scrollY - 1);
+    }, 100);
+
     /* ====================================================
-       2. TRANSLACJA ORBÓW ZA KURSOR (MYSZKĄ) - Desktop Only
+       2. TRANSLACJA ORBÓW ZA KURSOR (MYSZKĄ)
        ==================================================== */
     const orbs = document.querySelectorAll('.orb');
-    if (orbs.length > 0 && window.matchMedia("(hover: hover)").matches) {
+    if (window.matchMedia("(hover: hover)").matches) {
         document.addEventListener('mousemove', (e) => {
             const x = (e.clientX / window.innerWidth - 0.5) * 2; 
             const y = (e.clientY / window.innerHeight - 0.5) * 2;
-            orbs[0].style.transform = `translate(${x * -80}px, ${y * -80}px) scale(1.15)`;
-            if(orbs[1]) orbs[1].style.transform = `translate(${x * 50}px, ${y * 50}px) scale(1.2)`;
-            if(orbs[2]) orbs[2].style.transform = `translate(${x * -30}px, ${y * -30}px) scale(1.05)`;
+            if(orbs[0]) orbs[0].style.transform = `translate(${x * -40}px, ${y * -40}px)`;
+            if(orbs[1]) orbs[1].style.transform = `translate(${x * 30}px, ${y * 30}px)`;
+            if(orbs[2]) orbs[2].style.transform = `translate(${x * -20}px, ${y * -20}px)`;
         });
     }
 
@@ -38,28 +47,32 @@ document.addEventListener('DOMContentLoaded', () => {
        3. NAVBAR SCROLL EFFECT
        ==================================================== */
     const navbar = document.querySelector('.navbar');
-    if (navbar && !navbar.classList.contains('solid')) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 30) navbar.classList.add('scrolled');
-            else navbar.classList.remove('scrolled');
-        });
-    }
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('solid');
+        } else {
+            // Jeśli nie jest na podstronie (która ma zawsze 'solid'), usuń klasę
+            if (!document.title.includes('|')) {
+                navbar.classList.remove('solid');
+            }
+        }
+    });
 
     /* ====================================================
-       4. POTĘŻNE MOBILE MENU Z ANIMACJĄ
+       4. MOBILE MENU (Zgodność z style.css .active)
        ==================================================== */
     const menuToggle = document.querySelector('.menu-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
     
     if (menuToggle && mobileMenu) {
         menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('open');
+            mobileMenu.classList.toggle('active');
             const icon = menuToggle.querySelector('i');
-            if(mobileMenu.classList.contains('open')) {
-                icon.classList.replace('ri-menu-3-line', 'ri-close-fill');
-                document.body.style.overflow = 'hidden'; // block scroll
+            if(mobileMenu.classList.contains('active')) {
+                icon.className = 'ri-close-fill';
+                document.body.style.overflow = 'hidden';
             } else {
-                icon.classList.replace('ri-close-fill', 'ri-menu-3-line');
+                icon.className = 'ri-menu-3-line';
                 document.body.style.overflow = '';
             }
         });
@@ -68,15 +81,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenu.classList.remove('open');
-                menuToggle.querySelector('i').classList.replace('ri-close-fill', 'ri-menu-3-line');
+                mobileMenu.classList.remove('active');
+                menuToggle.querySelector('i').className = 'ri-menu-3-line';
                 document.body.style.overflow = '';
             });
         });
     }
 
     /* ====================================================
-       5. ROZWIJAK FAQ (Akordeon)
+       5. ROZWIJAK FAQ
        ==================================================== */
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
@@ -84,29 +97,4 @@ document.addEventListener('DOMContentLoaded', () => {
             item.classList.toggle('active');
         });
     });
-
-    /* ====================================================
-       6. DZIAŁAJĄCY NEWSLETTER (LOCALSTORAGE OCHRONA)
-       ==================================================== */
-    const newsletterForm = document.getElementById('real-newsletter');
-    const emailInput = document.getElementById('emailInput');
-    const statusBox = document.getElementById('newsletterStatus');
-    const subBtn = document.getElementById('subBtn');
-
-    if (newsletterForm) {
-        let subsList = JSON.parse(localStorage.getItem('jnd_subscribers')) || [];
-        if(subsList.length === 0) {
-            subsList = ['tester@ai.com', 'startup@visionary.com'];
-            localStorage.setItem('jnd_subscribers', JSON.stringify(subsList));
-        }
-    }
-
-    function showStatus(msg, type) {
-        statusBox.textContent = msg;
-        statusBox.className = 'newsletter-status'; 
-        if (type === 'error') statusBox.classList.add('status-error');
-        else statusBox.classList.add('status-success');
-        statusBox.style.opacity = '0';
-        setTimeout(() => statusBox.style.opacity = '1', 10);
-    }
 });
